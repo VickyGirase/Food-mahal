@@ -2,7 +2,6 @@
   "name": "react",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "parcel Frontend/public/index.html",
     "build": "parcel build Frontend/public/index.html",
