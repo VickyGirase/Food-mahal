@@ -19,7 +19,7 @@ const Header = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post("http://localhost:5000/logout")
+        axios.post("https://food-mahal-server.onrender.com/logout")
         .then(result => {
             console.log(result)
             if(result.data ){
