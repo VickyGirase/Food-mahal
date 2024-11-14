@@ -27,20 +27,25 @@ const Login = () => {
         }
     };
 
+    const handleSignup = () => {
+        navigate('/');
+      };
+    
+
   return (
-    <div className=' bg-orange-300 w-screen h-screen flex items-center justify-center'>
-    <div className='bg-white border-black border-2 px-10 py-8 rounded-lg'>
-        <h1 className='flex items-center justify-center font-bold text-2xl mb-3 '>Login</h1>
+    <div className=' flex items-center justify-center min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600'>
+    <div className='w-80 bg-white rounded-2xl shadow-lg p-8'>
+        <h1 className='text-2xl font-semibold text-center text-gray-700 mb-6 '>Login</h1>
 
-        <form className='flex items-center justify-between flex-col gap-4 ' onSubmit={handleSubmit}>
+        <form className='space-y-4 ' onSubmit={handleSubmit}>
                   
-                  <input className='border-zinc-500 border-2 p-1' type="text" name='email' placeholder='Enter EmailId' onChange={(e) => setEmail(e.target.value)} />
-                  <input className='border-zinc-500 border-2 p-1' type="text" name='password' placeholder='Enter Password' onChange={(e) => setPassword(e.target.value)} />
+                  <input className='w-full py-2 outline-none text-gray-700 font-medium ' type="text" name='email' placeholder='Enter EmailId' onChange={(e) => setEmail(e.target.value)} />
+                  <input className='w-full py-2 outline-none text-gray-700 font-medium' type="text" name='password' placeholder='Enter Password' onChange={(e) => setPassword(e.target.value)} />
 
-                  <button className='bg-blue-600 hover:bg-blue-800 rounded-lg text-white px-16 py-2' type='submit'>Login</button>
+                  <button className='w-full bg-purple-600 text-white py-2 rounded-md shadow-md mt-6 hover:bg-purple-700 transition-all' type='submit'>Login</button>
 
                   <p>Don't Have An Account</p>
-                  <Link className='bg-blue-600 hover:bg-blue-800 rounded-lg text-white px-16 py-2' to='/'>Signup</Link>
+                  <button className='w-full bg-purple-600 text-white py-2 rounded-md shadow-md mt-6 hover:bg-purple-700 transition-all' onClick={handleSignup}>Signup </button>
               </form>
           </div>
     </div>
