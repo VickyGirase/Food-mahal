@@ -18,7 +18,7 @@ const Signup = () => {
 
         try{
 
-            await axios.post("http://localhost:5000/signup",{
+            await axios.post("https://food-mahal-server.onrender.com/signup",{
                 firstName,emailId,password
             })
             .then(result => {
